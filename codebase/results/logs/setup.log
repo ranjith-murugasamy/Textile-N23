@@ -1,0 +1,14 @@
+
+[notice] A new release of pip is available: 26.0 -> 26.3
+[notice] To update, run: /Users/ranjithmurugasamy/zeka-workspace/research-agent-platform/storage/workspaces/19/final-output/codebase/.venv/bin/python3.14 -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 26.0 -> 26.3
+[notice] To update, run: /Users/ranjithmurugasamy/zeka-workspace/research-agent-platform/storage/workspaces/19/final-output/codebase/.venv/bin/python3.14 -m pip install --upgrade pip
+
+added 128 packages in 8s
+npm warn install-scripts 2 packages had install scripts blocked because they are not covered by allowScripts:
+npm warn install-scripts   fsevents@2.3.3 (install: node-gyp rebuild)
+npm warn install-scripts   esbuild@0.21.5 (postinstall: node install.js)
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+setup complete

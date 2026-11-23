@@ -1,0 +1,6 @@
+response,cotton_benchmark_unverified,draft_Table5_blend,refit_prediction,refit_bootstrap_ci_lo,refit_bootstrap_ci_hi,refit_PI95_lo,refit_PI95_hi,best_observed_run
+Tenacity (cN/tex),12,9.617,9.5,9.245,9.903,8.774,10.23,9.5
+Elongation (%),6,5.702,5.561,5.169,5.922,4.931,6.19,7.5
+Unevenness U (%),12.5,11.1,10.78,10.41,11.24,9.847,11.71,10.51
+Imperfections (per km),545,456,458.1,445.7,469.9,433.2,483.1,456
+Hairiness index H,4.7,4.37,4.517,3.802,5.159,3.093,5.941,4.15

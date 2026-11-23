@@ -1,0 +1,10 @@
+.venv/
+node_modules/
+dist/
+__pycache__/
+*.pyc
+data/raw/
+data/processed/
+*.pt
+*.pth
+.env

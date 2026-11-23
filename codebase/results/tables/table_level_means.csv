@@ -1,0 +1,4 @@
+blend_first_pct,tenacity_cN_tex_mean,tenacity_cN_tex_std,elongation_pct_mean,elongation_pct_std,u_pct_mean,u_pct_std,imperfections_per_km_mean,imperfections_per_km_std,hairiness_index_mean,hairiness_index_std
+30,7.300,0.258,7.250,0.208,12.718,0.138,539.500,10.149,8.680,0.375
+50,8.343,0.496,6.271,0.442,12.323,0.087,510.286,10.797,6.890,0.638
+70,9.275,0.222,5.300,0.258,11.262,0.624,469.000,12.356,5.157,0.715

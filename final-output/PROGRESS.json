@@ -1,0 +1,1 @@
+{"phase": "qa", "done": 11, "total": 11, "remaining_phases_min": 10, "note": "No training; analysis is a 15-run least-squares problem. Grid: 2 scenarios x 2000 bootstrap refits."}

@@ -1,0 +1,6 @@
+response,terms_kept,n_terms,R2,R2_adj,R2_pred,RMSE
+Tenacity (cN/tex),A B C B2 C2,5,0.9594,0.9368,0.8716,0.2086
+Elongation (%),A B C B2 C2,5,0.9718,0.9562,0.9099,0.1689
+Unevenness U (%),A B AB A2,4,0.9158,0.8821,0.6731,0.2233
+Imperfections (per km),A B C B2 C2,5,0.9636,0.9434,0.8874,6.8318
+Hairiness index H,A B C B2 C2,5,0.9502,0.9226,0.8425,0.4019

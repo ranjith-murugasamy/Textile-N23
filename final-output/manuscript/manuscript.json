@@ -1,0 +1,1095 @@
+{
+ "header_left": "Waste and Biomass Valorization",
+ "header_right": "Original research article",
+ "title": "Valorization of Cigarette-Butt and Cotton Comber Noil Wastes into Rotor-Spun Blended Yarns: Response-Surface Re-analysis of a Box-Behnken Spinning Study",
+ "authors": "[Author 1], [Author 2], [Author 3]",
+ "affiliations": [
+  "[Affiliation: department, institution, city, country]"
+ ],
+ "corresponding": "[AUTHORS: corresponding author name and e-mail]",
+ "abstract": "Discarded cigarette filters are made of cellulose acetate and are the most littered item worldwide, yet routes that turn them into continuous textile products are rarely documented. This paper revisits a rotor-spinning study in which pretreated cigarette-filter fibre was blended with cotton comber noil and spun into 7 Ne yarn under a 15-run Box-Behnken design (blend label, opening-roller speed, rotor speed). We re-analysed the original run table with full quadratic response-surface models, ANOVA, leave-one-out validation, a bootstrap and a composite desirability search. The equations printed in the earlier draft contained no squared terms and reproduced only R2 = 0.45 of the tenacity variance against the 0.98 claimed; the quadratic refit gives R2 = 0.975 but a predicted R2 of only 0.60; reduced models do better but are optimistic. Moving the blend label from 30:70 to 70:30 raised tenacity by 1.98 cN/tex (95% CI 1.57 to 2.38) and cut hairiness by 3.52 index units. The desirability optimum lies on the upper edge of the tested blend range, with predicted tenacity 9.50 cN/tex (95% prediction interval 8.8 to 10.2). No confirmation run, mass balance or contaminant assay was available, so the work demonstrates spinnability and a corrected optimisation, not recovery efficiency or product safety.",
+ "keywords": "Cigarette butt waste; Cellulose acetate; Comber noil; Rotor spinning; Box-Behnken design; Response surface methodology",
+ "sections": [
+  {
+   "heading": "1. Introduction",
+   "blocks": [
+    {
+     "type": "p",
+     "text": "Cigarette butts are the most frequently littered item in the world. Each filter is a plug of cellulose acetate that can carry nicotine, heavy metals and combustion residues into soil and water [1,2], and it persists for years in urban and coastal settings [3]. Collecting and landfilling the material treats only the symptom. A second line of work treats it as a feedstock."
+    },
+    {
+     "type": "p",
+     "text": "Recycling studies have turned the filter material into fired-clay bricks and asphalt additives [4,5], acoustic absorbers [6], nanocrystalline cellulose for biomedical use [7] and cellulose pulp for paper [8]. Nonwoven sorbents made from recovered cellulose acetate and cotton have also been optimised with a Box-Behnken design [9]. The textile route is much less developed. A yarn is a harder target than a nonwoven web because the fibres must be drafted, aligned and twisted continuously, and cellulose acetate recovered from filters is short, irregular and smooth."
+    },
+    {
+     "type": "p",
+     "text": "The earlier version of this study tackled that gap directly. Cigarette-filter fibre could not be spun alone on a rotor machine, because the shredded fibre clogged the card cylinder, so it was blended with cotton comber noil, itself a spinning-mill waste. Fifteen yarns were spun under a Box-Behnken design and described by response-surface equations. The draft had three weaknesses that a reviewer for a waste-valorisation journal would notice at once: the blend label was defined in two opposite ways, the printed regression equations did not fit the printed data, and nothing quantified how much waste was actually converted."
+    },
+    {
+     "type": "p",
+     "text": "We therefore treat this paper as a corrected re-analysis with an explicit scope. The contributions are four. First, we audit the printed equations against the printed run table and show where they fail. Second, we refit full quadratic models with ANOVA, leave-one-out validation and bootstrap uncertainty. Third, we redo the multi-response optimisation and show how well the data determine it. Fourth, we list the valorisation evidence (mass balance, contaminants, resource use, confirmation trial) that is still missing, so that no reader mistakes a spinning study for a demonstrated recovery process."
+    }
+   ]
+  },
+  {
+   "heading": "2. Literature survey",
+   "blocks": [
+    {
+     "type": "p",
+     "text": "Reviews of cigarette-butt management describe the scale of the problem and the toxicity of leachates [1,2,3]. A comparison of cellulose acetate and plastic filter pollution frames the environmental case for recovering the polymer rather than abandoning it [10], and a review of recycling options catalogues construction, sorption and energy uses [4]. Beyond those cited above, applications reported for cigarette-butt material include adsorbents, adhesives, corrosion inhibitors and horticultural substrates [11,12]; we cite them as categories and leave the authors to confirm the specific attributions."
+    },
+    {
+     "type": "p",
+     "text": "Characterisation of recovered cellulose acetate usually combines infrared spectroscopy, electron microscopy and thermogravimetry. The ester carbonyl band near 1735 cm-1, the C-O-C band near 1216 cm-1 and the broad hydroxyl band are the usual markers [13,14], and thermal degradation of cellulose acetate in an inert atmosphere is dominated by one main step in the 300-400 C range [15]. Alkaline treatment is a standard way to clean and modify cellulosic fibres [16], but with an acetate ester it may also deacetylate the polymer, which is why before-and-after spectra matter."
+    },
+    {
+     "type": "p",
+     "text": "On the spinning side, rotor-yarn quality depends on how well the opening roller individualises fibres and how they are laid in the rotor groove. Published work links opening-roller speed, rotor speed and fibre length to strength, unevenness and hairiness [17,18,19], and describes imperfection and hairiness behaviour in short-staple blends [20,21,22]. Those studies are mostly on virgin or cotton-based blends. Cigarette-filter fibre brings a smooth surface, low cohesion and irregular cut length, so their conclusions cannot be transferred without testing."
+    },
+    {
+     "type": "p",
+     "text": "Within the target journal, two recent studies show what a waste-to-fibre paper is expected to contain. One quantified separation yield and recyclable-fibre yield from textile waste after enzymatic treatment [23]. Another linked lignin extracted from corn stover to wet-spun fibre composition, morphology, thermal stability and mechanical behaviour [24]. Both report conversion or composition data next to product properties. The present study has the product properties and a statistical treatment of them; it lacks the conversion data, and we say so."
+    },
+    {
+     "type": "p",
+     "text": "Statistical methods used here are standard. The Box-Behnken design [25] supports quadratic models with few runs and has no corner points. Response-surface practice [26] calls for ANOVA, lack-of-fit and prediction statistics rather than a single R2. Prediction error is estimated by the PRESS statistic [27], normality of residuals by the Shapiro-Wilk test [28], uncertainty by the bootstrap [29], and several responses are combined with the desirability function [30]."
+    }
+   ]
+  },
+  {
+   "heading": "3. Materials and methods",
+   "blocks": [
+    {
+     "type": "h2",
+     "text": "3.1 Feedstocks"
+    },
+    {
+     "type": "p",
+     "text": "Two waste streams were used. Cigarette butts were collected from local sources and several commercial brands, separated by hand from remaining tobacco, and the filter material was isolated; cellulose acetate from both the inner and outer paper layers of the filters was used for yarn. Cotton comber noil came from spinning mills around Coimbatore, India. Table 1 gives the fibre properties as stated in the draft. The cigarette-butt fibre is longer (2.5% span length 20.5 mm against 12 mm) but its listed strength of 0.13 g/tex is much lower than that of the noil (2.5 g/tex); both the unit and the testing method for that value need to be confirmed, because a strength of 0.13 g/tex would not allow any yarn to be spun."
+    },
+    {
+     "type": "table",
+     "caption": "Fibre properties as reported in the draft (the instrument and standard used are not stated, so these values are quoted, not verified).",
+     "header": [
+      "Property",
+      "Cigarette-butt fibre",
+      "Comber noil"
+     ],
+     "rows": [
+      [
+       "2.5% span length (mm)",
+       "20.50",
+       "12"
+      ],
+      [
+       "50% span length (mm)",
+       "9.00",
+       "7"
+      ],
+      [
+       "Uniformity ratio (%)",
+       "43.90",
+       "50.4"
+      ],
+      [
+       "Fineness (micronaire)",
+       "4.68",
+       "3.16"
+      ],
+      [
+       "Strength (g/tex)",
+       "0.13",
+       "2.5"
+      ],
+      [
+       "Elongation (%)",
+       "9.00",
+       "4.3"
+      ],
+      [
+       "Density (g/cm3)",
+       "1.31",
+       "1.52"
+      ]
+     ]
+    },
+    {
+     "type": "h2",
+     "text": "3.2 Pretreatment"
+    },
+    {
+     "type": "p",
+     "text": "Isolated fibres were soaked in distilled water for 24 h, treated with 5% (w/v) sodium hydroxide at room temperature for 60 min, washed with distilled water, neutralised with 1% (w/v) acetic acid and dried at 80 C for 24 h. The protocol follows earlier work on removing nicotine, metals and organic contaminants. We did not measure its effect on contaminants, on the degree of acetylation or on the mass of fibre retained, so those aspects are outside the evidence of this paper."
+    },
+    {
+     "type": "h2",
+     "text": "3.3 Yarn production"
+    },
+    {
+     "type": "p",
+     "text": "Yarns were produced on a micro-spinning line (Trytex, India). Slivers were prepared on a miniature card and passed twice through a draw frame. The drawn sliver was spun on a rotor machine to a final count of 7 Ne with 18 twists per inch (Z twist), from a feed hank of 0.15 Ne. The draft states a base rotor speed of 20,000 rpm in the spinning description and 30,000 to 50,000 rpm in the experimental design; we use the design values because the run table is built on them, and flag the discrepancy for the authors. Fig. 1 shows the process flow."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/data/raw/user_image1.jpeg",
+     "caption": "Manufacturing route from cigarette filters and comber noil to rotor-spun yarn (the authors' own flow chart, reproduced from the earlier draft).",
+     "width_cm": 12.0
+    },
+    {
+     "type": "h2",
+     "text": "3.4 Yarn testing"
+    },
+    {
+     "type": "p",
+     "text": "Conditioning followed ISO 139 (20 +/- 2 C, 65 +/- 4% relative humidity). Single-yarn tenacity and elongation were measured on a Uster Tensorapid 4 following ASTM D2256. Unevenness (U%) and imperfections per kilometre were measured on a Uster Tester 5 following ASTM D1425, and hairiness was reported as a hairiness index. The draft does not state how many specimens were tested per run, so each run is treated as one value."
+    },
+    {
+     "type": "h2",
+     "text": "3.5 Fibre characterisation"
+    },
+    {
+     "type": "p",
+     "text": "Infrared spectra were recorded on a Shimadzu 8400S in attenuated total reflection mode. Fibre surfaces were imaged with a Zeiss EVO-18 environmental scanning electron microscope after gold coating. Thermogravimetric analysis used a Netzsch Jupiter STA 449 F3 on about 5 mg of sample, heated to 773 K at 20 K/min in nitrogen. Raw spectra and thermograms were not supplied, so we use the authors' figures and their stated numerical readings only."
+    },
+    {
+     "type": "h2",
+     "text": "3.6 Experimental design and dataset"
+    },
+    {
+     "type": "p",
+     "text": "A three-factor Box-Behnken design gives twelve edge-midpoint runs and three centre replicates, 15 in all (Table 2). The factors were the blend label (30:70, 50:50, 70:30), the opening-roller speed (4000, 5000, 6000 rpm) and the rotor speed (30,000, 40,000, 50,000 rpm). Table 3 lists the runs exactly as printed in the draft. These are rounded values, not the original laboratory records. There is no train/test split: with 15 runs every observation is needed to fit ten coefficients, so we use leave-one-out validation and the centre replicates for pure error instead."
+    },
+    {
+     "type": "p",
+     "text": "The draft defines the blend label in two ways. The Methods section calls it cellulose acetate to comber noil, while the header of its Table 3 reads CO:CBF (comber noil to cigarette-butt fibre), and the discussion reads 70:30 as cotton to acetate. We could not resolve this from the supplied files. To avoid choosing the reading that suits the narrative, we refer to the first number of the label as the share of the first-listed fibre, code it as X1, and state which results depend on the assignment. All statistical results below are identical under either assignment; only the physical interpretation changes."
+    },
+    {
+     "type": "table",
+     "caption": "Box-Behnken factors, levels and coding. The first number of the blend label is the share (%) of the first-listed fibre.",
+     "header": [
+      "Factor",
+      "Unit",
+      "-1",
+      "0",
+      "+1"
+     ],
+     "rows": [
+      [
+       "X1 blend label (first-listed : second-listed fibre)",
+       "%",
+       "30:70",
+       "50:50",
+       "70:30"
+      ],
+      [
+       "X2 opening roller speed",
+       "rpm",
+       "4000",
+       "5000",
+       "6000"
+      ],
+      [
+       "X3 rotor speed",
+       "rpm",
+       "30000",
+       "40000",
+       "50000"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "caption": "The 15 Box-Behnken runs and observed yarn properties as printed in the draft (rounded values; single measurement per run as far as the draft states). Runs 10, 14 and 15 are the centre replicates.",
+     "header": [
+      "Run",
+      "Blend label",
+      "Roller (rpm)",
+      "Rotor (rpm)",
+      "Tenacity (cN/tex)",
+      "Elong. (%)",
+      "U (%)",
+      "Imperf. (/km)",
+      "Hairiness"
+     ],
+     "rows": [
+      [
+       1,
+       "50:50",
+       4000,
+       30000,
+       7.5,
+       5.6,
+       12.45,
+       526,
+       7.85
+      ],
+      [
+       2,
+       "70:30",
+       5000,
+       50000,
+       9.4,
+       5.4,
+       11.12,
+       461,
+       5.21
+      ],
+      [
+       3,
+       "50:50",
+       6000,
+       50000,
+       8.2,
+       6.1,
+       12.36,
+       516,
+       7.16
+      ],
+      [
+       4,
+       "70:30",
+       4000,
+       40000,
+       9.5,
+       5.6,
+       10.51,
+       456,
+       4.15
+      ],
+      [
+       5,
+       "50:50",
+       6000,
+       30000,
+       8.0,
+       5.9,
+       12.4,
+       520,
+       7.44
+      ],
+      [
+       6,
+       "70:30",
+       5000,
+       30000,
+       9.2,
+       5.2,
+       11.41,
+       478,
+       5.46
+      ],
+      [
+       7,
+       "30:70",
+       5000,
+       30000,
+       7.2,
+       7.2,
+       12.77,
+       543,
+       8.87
+      ],
+      [
+       8,
+       "30:70",
+       6000,
+       40000,
+       7.0,
+       7.0,
+       12.88,
+       552,
+       9.07
+      ],
+      [
+       9,
+       "70:30",
+       6000,
+       40000,
+       9.0,
+       5.0,
+       12.01,
+       481,
+       5.81
+      ],
+      [
+       10,
+       "50:50",
+       5000,
+       40000,
+       8.8,
+       6.7,
+       12.22,
+       498,
+       6.13
+      ],
+      [
+       11,
+       "30:70",
+       4000,
+       40000,
+       7.4,
+       7.3,
+       12.66,
+       534,
+       8.57
+      ],
+      [
+       12,
+       "30:70",
+       5000,
+       50000,
+       7.6,
+       7.5,
+       12.56,
+       529,
+       8.21
+      ],
+      [
+       13,
+       "50:50",
+       4000,
+       50000,
+       8.3,
+       6.2,
+       12.33,
+       510,
+       6.93
+      ],
+      [
+       14,
+       "50:50",
+       5000,
+       40000,
+       8.8,
+       6.7,
+       12.26,
+       502,
+       6.38
+      ],
+      [
+       15,
+       "50:50",
+       5000,
+       40000,
+       8.8,
+       6.7,
+       12.24,
+       500,
+       6.34
+      ]
+     ],
+     "font": 7
+    },
+    {
+     "type": "h2",
+     "text": "3.7 Statistical analysis and evaluation parameters"
+    },
+    {
+     "type": "p",
+     "text": "For each response y the coded design matrix contains an intercept, three linear terms, three two-factor interactions and three squared terms:"
+    },
+    {
+     "type": "equation",
+     "text": "y = b0 + b1 A + b2 B + b3 C + b12 AB + b13 AC + b23 BC + b11 A^2 + b22 B^2 + b33 C^2 + e",
+     "number": 1
+    },
+    {
+     "type": "p",
+     "text": "Coefficients were estimated by ordinary least squares. We report the coefficient of determination, the adjusted value and the leave-one-out predicted value:"
+    },
+    {
+     "type": "equation",
+     "text": "R2 = 1 - SSE/SST;   R2_adj = 1 - [SSE/(n-p)] / [SST/(n-1)];   R2_pred = 1 - PRESS/SST",
+     "number": 2
+    },
+    {
+     "type": "p",
+     "text": "where n = 15 runs, p = 10 coefficients and PRESS is the sum of squared leave-one-out residuals e_i/(1 - h_i) [27]. Lack of fit was tested against pure error from the three centre runs (two degrees of freedom). The signal-to-noise ratio is (max fitted - min fitted) divided by the square root of (MSE x p / n). Residual normality was tested with the Shapiro-Wilk test."
+    },
+    {
+     "type": "p",
+     "text": "For optimisation each response was mapped to a desirability d between 0 and 1 over its observed range [L, U]. For a response to be maximised d = (y - L)/(U - L), for one to be minimised d = (U - y)/(U - L), and for a response left free within its observed range d = 1. The composite desirability is the geometric mean of the five values:"
+    },
+    {
+     "type": "equation",
+     "text": "D = (d_tenacity x d_elongation x d_U x d_imperf x d_hair)^(1/5)",
+     "number": 3
+    },
+    {
+     "type": "p",
+     "text": "In the primary scenario (S1) tenacity is maximised, U%, imperfections and hairiness are minimised and elongation is free within its observed range; in S2 elongation is maximised as well. These goals were fixed before the analysis. Because the blend factor is bounded, the search covers the tested cube only (a 41 x 41 x 41 grid, which is 1 percentage point of blend, 50 rpm of roller speed and 500 rpm of rotor speed per step). Uncertainty of the optimum was estimated by a residual bootstrap with 2000 resamples: leverage-adjusted, centred residuals were resampled onto the fitted values, all five models were refitted, and the optimum was recomputed each time (seed 20231123). Prediction intervals at the optimum use the t distribution with 5 residual degrees of freedom. The code is in the repository listed under data and code availability."
+    }
+   ]
+  },
+  {
+   "heading": "4. Results and discussion",
+   "blocks": [
+    {
+     "type": "h2",
+     "text": "4.1 Fibre characterisation"
+    },
+    {
+     "type": "p",
+     "text": "The infrared spectrum of the treated cigarette-filter fibre (Fig. 2) shows a broad hydroxyl band between 3800 and 3000 cm-1, a C-H stretching peak at 2922.59 cm-1, a strong ester carbonyl band at 1735 cm-1, bands at 1369 and 1029 cm-1 (C-H deformation and C-O stretching) and a C-O-C band at 1216 cm-1. These match the usual cellulose acetate pattern, so the fibre is still predominantly an acetate ester after the NaOH step. That conclusion has a limit: without the spectrum of the untreated fibre, we cannot say whether the carbonyl band lost intensity, and 5% NaOH can deacetylate cellulose acetate."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/data/raw/user_image2.png",
+     "caption": "Infrared spectrum of the recovered cellulose acetate fibre (authors' measurement, reproduced from the earlier draft).",
+     "width_cm": 10.0
+    },
+    {
+     "type": "p",
+     "text": "Scanning electron micrographs (Fig. 3) show a smooth, nearly featureless surface for the acetate fibre and a rough, convoluted surface with grooves for cotton. The difference matters for spinning: a smooth surface offers little frictional grip, which is the usual explanation for slippage and low cohesion in acetate-rich blends."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/data/raw/user_image3.jpeg",
+     "caption": "Scanning electron micrographs of (a) cotton fibre and (b) cellulose acetate fibre (authors' images, reproduced from the earlier draft).",
+     "width_cm": 11.0
+    },
+    {
+     "type": "p",
+     "text": "The thermogram (Fig. 4) shows a small early mass loss, a main degradation step centred near 370 C and a residual mass of 16.56% at 498 C, the figure printed on the curve. The draft's text gives 4.5% mass loss up to 225 C and a 70-80% loss between 225 and 380 C. Reading the plotted curve by eye, the mass at 225 C is closer to 90% than to 95.5%, so those text values do not obviously match the plot; we therefore quote only the residual mass and ask for the exported data to extract onset and peak temperatures. The late-stage 'carbonisation' of cellulose acetate between 380 and 500 C that the draft invokes is likewise not distinguishable here, since the curve is nearly flat after about 420 C."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/data/raw/user_image4.png",
+     "caption": "Thermogravimetric curve of the recovered cellulose acetate fibre in nitrogen at 20 K/min (authors' measurement, reproduced from the earlier draft). The residual mass of 16.56% at 498 C is printed on the original figure.",
+     "width_cm": 9.0
+    },
+    {
+     "type": "h2",
+     "text": "4.2 What the run table shows"
+    },
+    {
+     "type": "p",
+     "text": "Before any model, the raw table (Table 3) already carries the main result. Averaged over the runs at each label (Fig. 6), tenacity is 7.30, 8.34 and 9.28 cN/tex for 30:70, 50:50 and 70:30; elongation falls from 7.25% to 5.30%; U% falls from 12.72 to 11.26; imperfections from 540 to 469 per km; and the hairiness index from 8.68 to 5.16. Tenacity and hairiness are almost perfectly anti-correlated across all 15 runs (Fig. 5; r = -0.983), and U% and imperfections are strongly correlated (r = 0.932), so the five responses carry fewer than five independent pieces of information. Tenacity and elongation conflict (r = -0.65): the label that gives strong yarn gives less extensible yarn."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_01_design_and_tradeoff.png",
+     "caption": "Left: the 15 Box-Behnken runs in coded factor space, twelve edge-midpoint runs and three centre replicates. Right: observed tenacity against hairiness for every run, coloured by the printed blend label.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_09_blend_level_results.png",
+     "caption": "Observed values of all five responses for each printed blend label, one dot per run (four runs at 30:70 and at 70:30, seven at 50:50 including the three centre replicates), with the mean as a black bar.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "p",
+     "text": "The three centre replicates are nearly identical (standard deviations of 0.00 cN/tex for tenacity, 0.020 for U% and 2.0 per km for imperfections). Such close agreement is possible but also what one sees when repeated values are averaged or copied; the authors should confirm they are independent spinning runs, because the lack-of-fit test depends on them."
+    },
+    {
+     "type": "h2",
+     "text": "4.3 The printed response-surface equations do not fit the printed data"
+    },
+    {
+     "type": "p",
+     "text": "The draft's Table 4 lists, for each response, an intercept, three linear terms and three interactions, with R2 between 0.931 and 0.989. We applied those equations to the Table 3 runs. For tenacity they explain 0.45 of the variance, for elongation 0.44, for U% -0.12 (a negative value, worse than predicting the mean), for imperfections 0.85 and for hairiness 0.67 (Table 4, Fig. 7). Refitting the same linear-plus-interaction form by least squares gives 0.857 for tenacity, matching an independent check reported by a reviewer, and 0.86 to 0.91 across the five responses. Neither matches the claimed values."
+    },
+    {
+     "type": "table",
+     "caption": "Audit of the draft's response-surface equations: R2 as reported, R2 obtained when the printed equation is applied to the Table 3 data, and refits. Predicted R2 is the leave-one-out value.",
+     "header": [
+      "Response",
+      "R2 reported",
+      "R2 printed eq. on data",
+      "R2 linear+2FI refit",
+      "R2 quadratic",
+      "Adj. R2 quad.",
+      "Pred. R2 quad."
+     ],
+     "rows": [
+      [
+       "Tenacity",
+       "0.980",
+       "0.450",
+       "0.857",
+       "0.975",
+       "0.930",
+       "0.597"
+      ],
+      [
+       "Elongation",
+       "0.989",
+       "0.439",
+       "0.872",
+       "0.980",
+       "0.944",
+       "0.679"
+      ],
+      [
+       "U%",
+       "0.931",
+       "-0.120",
+       "0.856",
+       "0.932",
+       "0.811",
+       "-0.079"
+      ],
+      [
+       "Imperfections",
+       "0.981",
+       "0.847",
+       "0.914",
+       "0.975",
+       "0.931",
+       "0.613"
+      ],
+      [
+       "Hairiness",
+       "0.986",
+       "0.672",
+       "0.902",
+       "0.968",
+       "0.911",
+       "0.506"
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_04_model_audit.png",
+     "caption": "Five versions of R-squared for each response: the value printed in the draft, the R-squared obtained by applying the printed Table 4 equation to the Table 3 data, and refits with linear plus two-factor terms, the full quadratic model, and the leave-one-out predicted R-squared of the quadratic model.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "p",
+     "text": "The full quadratic fit gives R2 values of 0.932 to 0.980, close to the reported ones. The printed intercept and the printed blend coefficient match the quadratic fit for all five responses (for tenacity 8.80 and 0.9875 in both, and the intercept equals the mean of the three centre runs), which is what one would expect if the printed equations were cut down from a quadratic model. The remaining coefficients do not all match: the printed BC term for tenacity is +0.15 against -0.15 in the refit, the printed roller term for elongation is +0.0625 against -0.087, and the printed AB term for U% is -0.1675 against +0.32. The most plausible reading is that the reported statistics came from a quadratic model whose squared terms were dropped when the equations were typed up, with some other coefficients altered on the way. We cannot prove that from rounded printed numbers; it needs the authors' original software output. The narrative of the draft also describes tenacity rising to an optimum roller or rotor speed and then falling, a behaviour that needs squared terms and that its printed equations cannot produce."
+    },
+    {
+     "type": "h2",
+     "text": "4.4 Quadratic models: adequacy and what they can claim"
+    },
+    {
+     "type": "p",
+     "text": "All five quadratic models are significant (Table 5; model p between 0.001 and 0.019), and signal-to-noise ratios of 9.1 to 15.4 are well above the threshold of 4. Shapiro-Wilk p-values are all above 0.43, so normal residuals are not rejected, though five residual degrees of freedom give that test little power (Fig. 9)."
+    },
+    {
+     "type": "table",
+     "caption": "Adequacy statistics of the full quadratic models (10 coefficients, 15 runs, 5 residual degrees of freedom). LOF is the lack-of-fit test against pure error from the three centre runs (2 df); n.d. means not defined because the centre replicates were identical.",
+     "header": [
+      "Response",
+      "F (9,5)",
+      "p (model)",
+      "RMSE",
+      "CV (%)",
+      "Signal/noise",
+      "LOF p",
+      "Shapiro-Wilk p"
+     ],
+     "rows": [
+      [
+       "Tenacity",
+       "21.5",
+       "0.002",
+       "0.220",
+       "2.6",
+       "13.2",
+       "n.d.",
+       "0.64"
+      ],
+      [
+       "Elongation",
+       "27.2",
+       "0.001",
+       "0.191",
+       "3.0",
+       "15.4",
+       "n.d.",
+       "0.61"
+      ],
+      [
+       "U%",
+       "7.7",
+       "0.019",
+       "0.283",
+       "2.3",
+       "9.1",
+       "0.003",
+       "0.43"
+      ],
+      [
+       "Imperfections",
+       "21.8",
+       "0.002",
+       "7.566",
+       "1.5",
+       "13.6",
+       "0.042",
+       "0.83"
+      ],
+      [
+       "Hairiness",
+       "16.8",
+       "0.003",
+       "0.432",
+       "6.3",
+       "12.7",
+       "0.057",
+       "0.94"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "caption": "Coefficients of the full quadratic models in coded units (A = (blend - 50)/20, B = (roller - 5000)/1000, C = (rotor - 40000)/10000). An asterisk marks p < 0.05.",
+     "header": [
+      "Term",
+      "Tenacity",
+      "Elongation",
+      "U%",
+      "Imperfections",
+      "Hairiness"
+     ],
+     "rows": [
+      [
+       "Intercept",
+       "8.800",
+       "6.700",
+       "12.240",
+       "500.000",
+       "6.283"
+      ],
+      [
+       "A (blend)",
+       "0.988*",
+       "-0.975*",
+       "-0.727*",
+       "-35.250*",
+       "-1.761*"
+      ],
+      [
+       "B (roller)",
+       "-0.062",
+       "-0.087",
+       "0.213",
+       "5.375",
+       "0.248"
+      ],
+      [
+       "C (rotor)",
+       "0.200",
+       "0.162",
+       "-0.082",
+       "-6.375",
+       "-0.264"
+      ],
+      [
+       "AB",
+       "-0.025",
+       "-0.075",
+       "0.320",
+       "1.750",
+       "0.290"
+      ],
+      [
+       "AC",
+       "-0.050",
+       "-0.025",
+       "-0.020",
+       "-0.750",
+       "0.102"
+      ],
+      [
+       "BC",
+       "-0.150",
+       "-0.100",
+       "0.020",
+       "3.000",
+       "0.160"
+      ],
+      [
+       "A2",
+       "-0.113",
+       "-0.050",
+       "-0.323",
+       "-4.750",
+       "0.105"
+      ],
+      [
+       "B2",
+       "-0.463*",
+       "-0.425*",
+       "0.097",
+       "10.500*",
+       "0.512"
+      ],
+      [
+       "C2",
+       "-0.338*",
+       "-0.325*",
+       "0.047",
+       "7.500",
+       "0.550"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "text": "The quantity that limits the claims is the predicted R2, 0.60 for tenacity, 0.68 for elongation, -0.08 for U%, 0.61 for imperfections and 0.51 for hairiness. A model with ten coefficients fitted to 15 points describes those points well but loses much of that skill when one run is withheld (Fig. 8). The U% model is the weakest: its predicted R2 is negative, and lack of fit is significant against pure error (p = 0.003); the same test gives p = 0.042 for imperfections and p = 0.057 for hairiness. The lack-of-fit F ratios are inflated by the very small pure-error variance of the centre runs, so they should be read as warnings, not as proof. For tenacity and elongation the centre replicates are identical and the test is undefined (Fig. 10)."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_02_predicted_vs_observed.png",
+     "caption": "Observed against predicted yarn properties for the full quadratic model: blue circles are fitted values, orange crosses are leave-one-out predictions that leave each run out of the fit.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_03_residual_diagnostics.png",
+     "caption": "Studentised residuals of the five quadratic models against fitted value (left, scaled to each response mean) and against normal quantiles (right).",
+     "width_cm": 14.0
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_10_noise_and_lack_of_fit.png",
+     "caption": "Left: model residual standard error (blue) against the standard deviation of the three centre replicates (orange), both as percent of the response mean. Right: signal-to-noise ratio of each model; the dashed line is the conventional threshold of 4.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "p",
+     "text": "The low predicted R2 values suggest that the full model carries more terms than 15 runs can support. As a robustness check we removed terms with p above 0.10 one at a time, keeping model hierarchy (Table 7). Four of the five responses (tenacity, elongation, imperfections, hairiness) keep the blend term, both speed terms and both squared speed terms; U% keeps blend, roller, their interaction and the squared blend term. The reduced models keep R2 between 0.92 and 0.97 and raise the predicted R2 to 0.67-0.91. That gain is partly an artefact: the same 15 runs picked the terms, so leave-one-out error computed afterwards is too optimistic. What matters for the paper's conclusions is that the optimum hardly moves. The reduced models place it at a blend label of 70, roller 4200 rpm and rotor 43000 rpm (D = 0.934), with predicted tenacity 9.51 cN/tex, against 9.50 from the full models."
+    },
+    {
+     "type": "table",
+     "caption": "Reduced models from backward elimination (terms removed when p > 0.10, hierarchy kept) compared with the full quadratic models. Because the same 15 runs choose the terms, the reduced predicted R2 is optimistic.",
+     "header": [
+      "Response",
+      "Terms kept (coded)",
+      "R2",
+      "Adj. R2",
+      "Pred. R2 reduced",
+      "Pred. R2 full"
+     ],
+     "rows": [
+      [
+       "Tenacity",
+       "A B C B2 C2",
+       "0.959",
+       "0.937",
+       "0.872",
+       "0.597"
+      ],
+      [
+       "Elongation",
+       "A B C B2 C2",
+       "0.972",
+       "0.956",
+       "0.910",
+       "0.679"
+      ],
+      [
+       "U%",
+       "A B AB A2",
+       "0.916",
+       "0.882",
+       "0.673",
+       "-0.079"
+      ],
+      [
+       "Imperfections",
+       "A B C B2 C2",
+       "0.964",
+       "0.943",
+       "0.887",
+       "0.613"
+      ],
+      [
+       "Hairiness",
+       "A B C B2 C2",
+       "0.950",
+       "0.923",
+       "0.843",
+       "0.506"
+      ]
+     ]
+    },
+    {
+     "type": "h2",
+     "text": "4.5 Effects of blend and process speeds"
+    },
+    {
+     "type": "p",
+     "text": "The blend term is the only effect that is significant for every response (Table 6, Fig. 11; p < 0.001 in each case). Moving the label from 30 to 70 changes tenacity by 1.98 cN/tex (95% CI 1.57 to 2.38), elongation by -1.95 percentage points (-2.30 to -1.60), U% by -1.45 (-1.97 to -0.94), imperfections by -70.5 per km (-84 to -57) and hairiness by -3.52 (-4.31 to -2.74). Each of these intervals excludes zero."
+    },
+    {
+     "type": "p",
+     "text": "Speed effects are smaller and less certain. For tenacity the significant terms other than blend are the squared roller term (p = 0.010) and the squared rotor term (p = 0.032), both negative, which means that tenacity peaks inside the tested range of both speeds and falls at either extreme (Fig. 12). The same two squared terms are significant for elongation. For U% and hairiness no speed term reaches p < 0.05; for imperfections only the squared roller term does (p = 0.045). Many of these p-values lie between 0.05 and 0.15 and, with five residual degrees of freedom, the study cannot separate small speed effects from noise."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_05_standardised_coefficients.png",
+     "caption": "Coded-factor coefficients of the full quadratic models, divided by the standard deviation of each response, with 95% confidence intervals; orange points have p below 0.05.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "p",
+     "text": "The mechanisms the draft offers (better fibre opening up to an optimum roller speed, fibre damage beyond it, poorer fibre laydown at high rotor speed) are plausible and consistent with the curvature found for tenacity and elongation, but the experiment did not test them. We kept them as hypotheses. Several statements in the draft concern rotor speeds above 50,000 or 60,000 rpm, which lie outside the tested range and cannot be supported by these data."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_06_response_surfaces.png",
+     "caption": "Contour maps of the full quadratic models. Top row: blend share against opening-roller speed with rotor speed held at its centre; bottom row: blend share against rotor speed with the roller at its centre. One column per yarn property.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "p",
+     "text": "The meaning of the blend effect depends on which fibre the first number refers to. If the first number is cellulose acetate (Methods reading), yarns with more acetate are stronger, smoother and less hairy, which agrees with the longer span length of the acetate fibre in Table 1 but contradicts the draft's explanation that smooth acetate lowers cohesion and strength, and its listed fibre strength. If the first number is comber noil (Table 3 header reading), more noil gives stronger yarn, which agrees with the noil's higher listed fibre strength and the cohesion argument, but means that more of the short (12 mm) fibre goes together with lower hairiness and lower U%, which is the opposite of what short-fibre content normally does. Neither reading is free of difficulty. Until the mixing sheets settle it, we make no mechanistic claim from the sign of the blend effect."
+    },
+    {
+     "type": "h2",
+     "text": "4.6 Multi-response optimisation"
+    },
+    {
+     "type": "p",
+     "text": "The composite desirability search over the tested cube places the optimum at a blend label of 70, an opening-roller speed of 4200 rpm and a rotor speed of 45000 rpm (D = 0.957; scenario S1). The draft reports 68.727, 4713.754 and 47,430.327 rpm. The two differ, but the bootstrap shows that the data do not tell them apart: the 95% bootstrap interval for the roller optimum is 4000 to 4700 rpm and for the rotor optimum 38500 to 50000 rpm, which includes the draft values for both. The blend optimum is at the upper bound in 99.6% of the resamples. The data therefore say that more of the first-listed fibre is better for the chosen goals, up to the highest level tested; they cannot say that 68.7 is better than 70, and they say nothing about blends above 70. Under S2, where elongation is maximised as well, the optimum moves to roller 4550 rpm and rotor 43500 rpm and the composite desirability falls to 0.731, because tenacity and elongation pull against each other (Fig. 13)."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_07_optimum_uncertainty.png",
+     "caption": "Distribution of the desirability optimum over 2000 residual-bootstrap refits of the quadratic models, for two goal sets, with the optimum printed in the draft shown as a dashed line.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "p",
+     "text": "At the S1 optimum the models predict tenacity 9.50 cN/tex (95% prediction interval 8.8 to 10.2), elongation 5.56%, U% 10.78, 458 imperfections per km and a hairiness index of 4.52 (Table 8). The prediction intervals are wide, for example 3.1 to 5.9 for hairiness, because they combine residual noise estimated on five degrees of freedom with parameter uncertainty."
+    },
+    {
+     "type": "table",
+     "caption": "Predicted properties at the recomputed optimum (scenario S1) with intervals, the draft's Table 5 blend values and the draft's 100% cotton benchmark. All entries in the first three columns are model predictions, not measurements.",
+     "header": [
+      "Property",
+      "Refit prediction",
+      "Bootstrap 95% CI",
+      "95% prediction interval",
+      "Draft Table 5 (blend)",
+      "Cotton benchmark (unverified)"
+     ],
+     "rows": [
+      [
+       "Tenacity (cN/tex)",
+       "9.50",
+       "9.25 to 9.90",
+       "8.77 to 10.23",
+       9.617,
+       12.0
+      ],
+      [
+       "Elongation (%)",
+       "5.56",
+       "5.17 to 5.92",
+       "4.93 to 6.19",
+       5.702,
+       6.0
+      ],
+      [
+       "Unevenness U (%)",
+       "10.78",
+       "10.41 to 11.24",
+       "9.85 to 11.71",
+       11.098,
+       12.5
+      ],
+      [
+       "Imperfections (per km)",
+       "458",
+       "446 to 470",
+       "433 to 483",
+       456.0,
+       545.0
+      ],
+      [
+       "Hairiness index H",
+       "4.52",
+       "3.80 to 5.16",
+       "3.09 to 5.94",
+       4.37,
+       4.7
+      ]
+     ]
+    },
+    {
+     "type": "h2",
+     "text": "4.7 Comparison with 100% cotton and the status of Table 5"
+    },
+    {
+     "type": "p",
+     "text": "The draft's Table 5 compares the optimised blend yarn with a 100% cotton yarn, and states that the characteristics are comparable. We cannot confirm that. The cotton values (tenacity 12.0 cN/tex, elongation 6.0%, U% 12.5, 545 imperfections per km, hairiness 4.70) come with no description of the cotton, count, process or replicates, so we treat them as an external, unreproduced benchmark. The tenacity gap is large: the upper end of the 95% prediction interval for the blend (10.2 cN/tex) is below 12.0. In U% and imperfections the benchmark lies above the upper end of the intervals, and for elongation and hairiness the benchmark falls inside them (Fig. 14). The sensible reading is a trade-off: the blend gives up roughly a fifth of the tenacity, and may gain in evenness and imperfections, which for coarse 7 Ne rotor yarn could suit applications that value regularity over strength. That claim would need a matched cotton yarn spun and tested in the same campaign."
+    },
+    {
+     "type": "p",
+     "text": "The values in Table 5 of the draft are model predictions, not measurements. At the draft's optimum the quadratic refit predicts tenacity 9.572 cN/tex against the printed 9.617, elongation 5.699 against 5.702, U% 11.084 against 11.098 and imperfections 460 against 456; the printed equations give 9.848, 5.662, 11.096 and 458. Close agreement of that kind (Fig. 15) is what a model produces, not what a tensile tester produces. Hairiness is the exception (4.37 printed, 4.76 refit, 4.15 from the printed equation). No confirmation trial was supplied. Until yarns are spun at the chosen settings and tested, the optimum should be described as predicted."
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_08_optimum_vs_cotton.png",
+     "caption": "Predicted properties at the recomputed optimum with 95% prediction intervals, the values printed in draft Table 5 for the blend yarn, and the draft's 100% cotton benchmark. No confirmation run was supplied, so every blue and orange point is a model prediction.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "figure",
+     "path": "../codebase/results/figures/fig_11_table5_provenance.png",
+     "caption": "Predictions at the optimum printed in the draft (blend 68.727, roller 4713.754 rpm, rotor 47430.327 rpm) from the printed Table 4 equations and from the quadratic refit, each divided by the value printed in Table 5.",
+     "width_cm": 14.0
+    },
+    {
+     "type": "p",
+     "text": "What would a spinner do with these results? The safest use is as a screening map. The blend label dominates, so the first decision is how much recovered filter fibre a mill is willing to put into the mix, and the data show a monotone improvement in every property except elongation up to the highest level tested. Roller and rotor speeds then act as fine tuning around the middle of their ranges, where the curvature terms place the tenacity maximum, and the loss from drifting to either end is modest compared with the gain from the blend. The elongation loss is the price: elongation falls from the 30:70 label to the 70:30 label by about two percentage points, which may matter for downstream weaving or knitting where yarns need to stretch without breaking. Those end uses were not tested here."
+    },
+    {
+     "type": "h2",
+     "text": "4.8 Waste-valorisation evidence"
+    },
+    {
+     "type": "p",
+     "text": "A waste-valorisation claim has two halves: the waste is converted into something useful, and the conversion is efficient and safe. The first half is supported. Pretreated cigarette-filter fibre was blended with comber noil and spun into 7 Ne rotor yarn in 15 successive trials, and the yarn properties varied in a systematic and statistically describable way. The second half is not supported by data we have. Table 9 lists what is missing."
+    },
+    {
+     "type": "table",
+     "caption": "Evidence for waste valorisation that was not available for this study. Each item is named in the journal reviewer's list; none was measured or reconstructed here.",
+     "header": [
+      "Item",
+      "What is needed",
+      "Status in this paper"
+     ],
+     "rows": [
+      [
+       "Mass balance and recovery yield",
+       "Masses of collected butts, isolated filters, dry pretreated fibre, comber noil, spinning waste, finished yarn",
+       "Not recorded; yields cannot be computed from yarn properties"
+      ],
+      [
+       "Residual nicotine and metals",
+       "Before and after assays with detection limits (for example ICP and chromatography)",
+       "Not measured; no safety claim is made"
+      ],
+      [
+       "Effect of 5% NaOH on acetyl groups",
+       "FTIR or degree-of-substitution of untreated and treated fibre",
+       "Only treated-fibre FTIR available"
+      ],
+      [
+       "Resource use",
+       "Water, NaOH, acetic acid, electricity, effluent per kg",
+       "Not recorded; no environmental saving is claimed"
+      ],
+      [
+       "Confirmation trial at the optimum",
+       "Replicate yarns spun and tested at the optimum settings",
+       "Not supplied; optimum is a prediction"
+      ],
+      [
+       "Replicate yarn measurements",
+       "Specimen counts and standard deviations per run",
+       "Not supplied; one value per run is used"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "text": "Without a mass balance we cannot say what fraction of collected butts ends up as yarn, and without before-and-after assays we cannot say that nicotine and metals were removed. The yarn should not be described as safe for skin contact or any end use that involves contact with people or water. The yield of cigarette-filter fibre compared with comber noil in the blend is also unknown, so the share of cigarette waste that the process can absorb is limited only by the 70% upper level tested, and we do not know whether higher shares are spinnable. Relative to the nonwoven sorbent route, the yarn route is distinguished by continuous production and by a different performance target, but this paper reports no head-to-head comparison and we do not claim one."
+    },
+    {
+     "type": "h2",
+     "text": "4.9 Computation"
+    },
+    {
+     "type": "p",
+     "text": "Reproducibility was a design goal. The 15-row table, the fixed random seed, the pinned library versions and the single pipeline script make every table and figure in this paper regenerate identically on a clean clone. We kept the analysis deliberately plain (ordinary least squares, residual bootstrap, grid search) so that the authors can repeat it in their own statistical package and compare the output with ours; a disagreement would point to rounding in the printed table or to a different model specification, both of which are worth knowing about before submission."
+    },
+    {
+     "type": "p",
+     "text": "The re-analysis is a 15-row least-squares problem. The full pipeline, including 2 x 2000 bootstrap refits of five models and the figures, runs in well under a minute on a laptop CPU; there is no training stage and no hyperparameter search, and every number in this paper is regenerated by one script from the table of runs."
+    }
+   ]
+  },
+  {
+   "heading": "5. Limitations",
+   "blocks": [
+    {
+     "type": "p",
+     "text": "The first limitation is data quality. The run table holds rounded values with one measurement per run, so we cannot estimate measurement error separately from model error, and the three centre values are almost identical. The second is size: 15 runs for ten coefficients leave five residual degrees of freedom, hence the low predicted R2 and wide intervals. The third is the unresolved blend label. The fourth is the absence of a confirmation run, which makes the optimum and Table 8 predictions rather than results. The fifth is the cotton benchmark, whose provenance is unknown."
+    },
+    {
+     "type": "p",
+     "text": "Beyond statistics, no mass balance, resource inventory, contaminant assay or acetyl-group analysis exists, so we make no statement about recovery efficiency, environmental benefit or product safety. Thermogravimetric and spectral data were available only as images. The thermogram text values need to be reconciled with the plotted curve. Finally, all models are local to the tested region, with blend between 30 and 70, roller speed 4000 to 6000 rpm and rotor speed 30,000 to 50,000 rpm."
+    }
+   ]
+  },
+  {
+   "heading": "6. Conclusions and future work",
+   "blocks": [
+    {
+     "type": "p",
+     "text": "Re-analysing the 15-run Box-Behnken data changes the paper's quantitative claims but supports its main qualitative one. The printed linear-plus-interaction equations reproduce only 0.45 of the tenacity variance, not the 0.98 reported, whereas full quadratic models fit the runs well (R2 0.93 to 0.98) but predict a withheld run only modestly (predicted R2 -0.08 to 0.68); reduced models raise that to 0.67-0.91 with an optimism caveat, and move the optimum only from rotor 45000 to 43000 rpm. The blend label is the dominant factor; the speed effects are small and mostly curvature."
+    },
+    {
+     "type": "p",
+     "text": "The best-supported settings are the highest blend label tested with roller speed near 4200 rpm and rotor speed near 45000 rpm, with wide uncertainty on both speeds. The predicted tenacity of 9.50 cN/tex is below the 12.0 cN/tex of the cotton benchmark, which is a real loss of strength that the application must tolerate."
+    },
+    {
+     "type": "p",
+     "text": "The next steps are experimental, not statistical. The authors should settle the blend definition from the mixing sheets; record masses through the pretreatment and spinning chain; assay nicotine and selected metals before and after treatment; compare untreated and treated fibre by infrared spectroscopy; spin and test replicate confirmation yarns at the optimum together with a matched cotton control; and, if possible, extend the blend range above 70 to find where spinning fails. Only then can the process be presented as a quantified waste-valorisation pathway."
+    }
+   ]
+  }
+ ],
+ "back_matter": [
+  {
+   "heading": "Declarations: Conflicts of interest",
+   "text": "[AUTHORS: state competing interests, or 'The authors declare no competing interests'.]"
+  },
+  {
+   "heading": "Declarations: Author contributions",
+   "text": "[Author 1] conceived the spinning study and produced the yarns. [Author 2] performed the characterisation. [AUTHORS: complete the CRediT statement.] The re-analysis code and the revised text were prepared with an AI assistant as described below, and the authors reviewed and take responsibility for them."
+  },
+  {
+   "heading": "Declarations: Funding",
+   "text": "[AUTHORS: funding sources or 'No funding was received'.]"
+  },
+  {
+   "heading": "Declarations: Data and code availability",
+   "text": "The 15-run table analysed here is printed as Table 3 and is included, with the analysis code, in the project repository under data/raw and src. [AUTHORS: add repository URL or DOI.] Raw FTIR, SEM and TGA files and the original unrounded yarn-test records are held by the authors."
+  },
+  {
+   "heading": "Declarations: Use of AI tools",
+   "text": "An AI assistant (Claude, Anthropic) was used to write the statistical re-analysis code, produce the figures and tables, and draft and revise the manuscript text, all under the authors' direction. Every number in the manuscript is generated by that code from the authors' run table. The authors checked the outputs and are responsible for the content. [AUTHORS: align this statement with the journal's current AI policy.]"
+  }
+ ],
+ "references": [
+  "Torkashvand J, Farzadkia M. Environ Sci Pollut Res. 2019;26(12):11618-11630.",
+  "Conradi M, Sanchez-Moyano JE. Sci Total Environ. 2022;847:157634.",
+  "Araujo MCB, Costa MF. Environ Res. 2019;172:137-149.",
+  "Mohajerani A, Kadir AA, Larobina L. Waste Manage. 2016;52:228-244.",
+  "Mohajerani A, Tanriverdi Y, Nguyen BT, Wong KK, Dissanayake HN, Johnson L, et al. Constr Build Mater. 2017;153:69-80.",
+  "Maderuelo-Sanz RM. J Environ Health Sci Eng. 2021;19(1):1075-1086.",
+  "Ogundare SA, Moodley V, Van Zyl WE. Carbohydr Polym. 2017;175:273-281.",
+  "Teixeira MBH, Duarte MAB, Garcez LR, Rubim JC, Gatti TH, Suarez PAZ. Waste Manage. 2017;60:140-150.",
+  "Viju S, Thilagavathi G, Priyadharshini U, Ezhil Adidya D. J Text Inst. 2024;116(8):1754.",
+  "Joly F-X, Coulis M. Waste Manage. 2018;72:349-353.",
+  "Marinello S, Lolli F, Gamberini R, Rimini B. J Hazard Mater. 2019;384:121245.",
+  "Mariotti L, Huarancca Reyes T, Curadi M, Guglielminetti L. Horticulturae. 2022;8(2):135.",
+  "Candido RG, Godoy GG, Goncalves A. Carbohydr Polym. 2017;167:280.",
+  "Shaikh H, Pandare K, Nair G, Varma A. Carbohydr Polym. 2009;76:23.",
+  "Arthanareeswaran G, Thanikaivelan P, Srinivasan K, Mohan D, Rajendran M. Eur Polym J. 2004;40:2153.",
+  "Mwaikambo LY, Ansell MP. J Appl Polym Sci. 2002;84(12):2222.",
+  "Kothari VK, Ishtiaque SM, Ogale VG. Indian J Fibre Text Res. 2002;27:48.",
+  "Bagwan ASA, Patil A. J Text Sci Eng. 2016;6(1):231.",
+  "Habib A, Cozeli N, Babaarslan O, Kanat H, Tan S. Text Leather Rev. 2024;7(1):831.",
+  "Celik HI, Coban O. TIJMET. 2022;5:108.",
+  "Roudbari BY, Eskandarnejad S, Bameni Moghadam M. J Text Inst. 2015;106:1219.",
+  "Jabbar A, Tausif M. Text Res J. 2023;93(21):5017.",
+  "Etuk E, Nawaz A, Liu Z, Lin CSK, Du C. Waste Biomass Valor. 2026;17:6047-6057. doi:10.1007/s12649-026-03488-0.",
+  "Szlek DB, Han N, Schorn I, Gerber J, Yoo CG, Frey MW. Waste Biomass Valor. 2026. doi:10.1007/s12649-026-03749-y.",
+  "Box GEP, Behnken DW. Some new three level designs for the study of quantitative variables. Technometrics. 1960;2(4):455-475.",
+  "Myers RH, Montgomery DC, Anderson-Cook CM. Response Surface Methodology: Process and Product Optimization Using Designed Experiments. 4th ed. Hoboken: Wiley; 2016.",
+  "Allen DM. The relationship between variable selection and data augmentation and a method for prediction. Technometrics. 1974;16(1):125-127.",
+  "Shapiro SS, Wilk MB. An analysis of variance test for normality (complete samples). Biometrika. 1965;52(3-4):591-611.",
+  "Efron B, Tibshirani RJ. An Introduction to the Bootstrap. New York: Chapman and Hall; 1993.",
+  "Derringer G, Suich R. Simultaneous optimization of several response variables. J Qual Technol. 1980;12(4):214-219."
+ ]
+}

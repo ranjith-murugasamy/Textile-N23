@@ -1,0 +1,87 @@
+Charts, graphs and metrics: explanations
+========================================
+Each entry names the PNG file in this folder that it explains.
+
+File: fig_01_design_and_tradeoff.png
+What it shows. Left: the 15 Box-Behnken runs in coded factor space, twelve edge-midpoint runs and three centre replicates. Right: observed tenacity against hairiness for every run, coloured by the printed blend label.
+
+How to read it. Read the left panel as the geometry of the design: no run sits at a corner of the cube. In the right panel, each dot is one yarn; points lower right are better (stronger, less hairy).
+
+Key takeaway. Tenacity and hairiness are almost perfectly anti-correlated across the 15 runs (Pearson r = -0.983); the 70:30 label gives the strongest and least hairy yarns, the 30:70 label the weakest and hairiest.
+
+File: fig_02_predicted_vs_observed.png
+What it shows. Observed against predicted yarn properties for the full quadratic model: blue circles are fitted values, orange crosses are leave-one-out predictions that leave each run out of the fit.
+
+How to read it. A perfect model puts every point on the grey line. Distance of the crosses from the line is the honest estimate of error on a run the model has not seen.
+
+Key takeaway. Fitted points hug the diagonal (R2 = 0.975 for tenacity) but leave-one-out points scatter: predicted R2 is 0.60 for tenacity and -0.08 for U%, so the models describe these 15 runs better than they would predict a new one.
+
+File: fig_03_residual_diagnostics.png
+What it shows. Studentised residuals of the five quadratic models against fitted value (left, scaled to each response mean) and against normal quantiles (right).
+
+How to read it. Residuals should scatter randomly around zero on the left and follow the grey line on the right. Departures would indicate a missing term or non-constant variance.
+
+Key takeaway. No response departs from normality by the Shapiro-Wilk test (smallest p = 0.43) and no single trend is obvious in the residual plot (a visual judgement), but with only 15 runs and five residual degrees of freedom per model these checks have little power.
+
+File: fig_04_model_audit.png
+What it shows. Five versions of R-squared for each response: the value printed in the draft, the R-squared obtained by applying the printed Table 4 equation to the Table 3 data, and refits with linear plus two-factor terms, the full quadratic model, and the leave-one-out predicted R-squared of the quadratic model.
+
+How to read it. Black bars are what the draft claims. If the other bars are lower, the printed equation does not deliver the claimed fit. Bars of the quadratic model that stay high but whose predicted R2 (green) is low indicate overfitting risk.
+
+Key takeaway. For tenacity the printed equation reproduces only R2 = 0.45 of the variance against the 0.98 reported; the linear + 2FI refit gives 0.857 and the quadratic refit 0.975, which is close to the reported value, so the reported R2 values most likely came from a quadratic model whose squared terms were left out of the printed equations.
+
+File: fig_05_standardised_coefficients.png
+What it shows. Coded-factor coefficients of the full quadratic models, divided by the standard deviation of each response, with 95% confidence intervals; orange points have p below 0.05.
+
+How to read it. A bar that crosses zero is not distinguishable from no effect. Longer bars are larger effects once all factors are scaled to the same coded range (-1 to +1).
+
+Key takeaway. The blend term (A) is significant for all five responses; for tenacity the other significant terms are B2, C2. For tenacity the blend effect moving from the 30 to the 70 level is 1.98 cN/tex (95% CI 1.57 to 2.38), while process speeds matter far less.
+
+File: fig_06_response_surfaces.png
+What it shows. Contour maps of the full quadratic models. Top row: blend share against opening-roller speed with rotor speed held at its centre; bottom row: blend share against rotor speed with the roller at its centre. One column per yarn property.
+
+How to read it. Colour bands are model predictions in the units of each response; closer contours mean a steeper change. Surfaces are fitted from 15 runs and are only valid inside the plotted design region.
+
+Key takeaway. Moving the blend label from 30 to 70 changes the fitted tenacity by about 2.0 cN/tex and hairiness by -3.5 index units, while the speed axes bend the surface only gently, with tenacity peaking near the middle of the roller range (B$^2$ p = 0.010).
+
+File: fig_07_optimum_uncertainty.png
+What it shows. Distribution of the desirability optimum over 2000 residual-bootstrap refits of the quadratic models, for two goal sets, with the optimum printed in the draft shown as a dashed line.
+
+How to read it. Each histogram counts where the optimum landed after resampling residuals. A narrow peak means a well-determined optimum; a flat spread means the data cannot place it. The draft's optimum lies inside the spread for roller and rotor.
+
+Key takeaway. The blend optimum sits on the upper bound of the tested range in 99.6% of bootstrap refits (scenario S1), so the data say 'as high as tested', not an interior value such as the draft's 68.7; roller and rotor optima are broad (95% intervals 4000-4700 rpm and 38500-50000 rpm).
+
+File: fig_08_optimum_vs_cotton.png
+What it shows. Predicted properties at the recomputed optimum with 95% prediction intervals, the values printed in draft Table 5 for the blend yarn, and the draft's 100% cotton benchmark. No confirmation run was supplied, so every blue and orange point is a model prediction.
+
+How to read it. Blue dot and bar: refit prediction and where a single new yarn would fall 95% of the time. Orange square: value printed in the draft. Red diamond: benchmark. Overlap of the red diamond with the bar means no model-based evidence of a difference.
+
+Key takeaway. The 95% prediction interval for tenacity (8.8 to 10.2 cN/tex) lies below the cotton benchmark of 12.0; the benchmark falls inside the interval only for Elongation, Hairiness. The model therefore supports a strength deficit relative to cotton; the benchmark values for U% and imperfections are above the upper end of the intervals, which is consistent with a cleaner blend yarn, but without the benchmark's replicate data this is not a significance test.
+
+File: fig_09_blend_level_results.png
+What it shows. Observed values of all five responses for each printed blend label, one dot per run (four runs at 30:70 and at 70:30, seven at 50:50 including the three centre replicates), with the mean as a black bar.
+
+How to read it. Compare bar heights between columns; the spread of dots inside a column shows the effect of the speed settings at that blend. Which fibre the first number refers to is unresolved in the draft.
+
+Key takeaway. Mean tenacity rises from 7.30 to 8.34 to 9.28 cN/tex and mean hairiness falls from 8.68 to 5.16 across the three labels, whereas mean elongation falls from 7.25% to 5.30%; strength and extensibility pull in opposite directions.
+
+File: fig_10_noise_and_lack_of_fit.png
+What it shows. Left: model residual standard error (blue) against the standard deviation of the three centre replicates (orange), both as percent of the response mean. Right: signal-to-noise ratio of each model; the dashed line is the conventional threshold of 4.
+
+How to read it. Centre replicates measure noise alone; a model error far above that suggests a missing term. Only two degrees of freedom support the pure-error estimate, so lack-of-fit p-values are indicative.
+
+Key takeaway. Signal-to-noise is above 4 for all five models (smallest 9.1); the lack-of-fit test is significant (p < 0.05) for U%, Imperfections and undefined for tenacity and elongation because the centre replicates are identical, so pure error is zero.
+
+File: fig_11_table5_provenance.png
+What it shows. Predictions at the optimum printed in the draft (blend 68.727, roller 4713.754 rpm, rotor 47430.327 rpm) from the printed Table 4 equations and from the quadratic refit, each divided by the value printed in Table 5.
+
+How to read it. Bars at 1.0 match Table 5 exactly. Agreement of a model prediction with Table 5 suggests that the number came from the model; it does not prove it, and a confirmation trial is still required.
+
+Key takeaway. Table 5 reports tenacity 9.617 cN/tex; the quadratic refit predicts 9.572 and the printed equation 9.848. Hairiness differs most: Table 5 4.37, refit 4.76, printed equation 4.15. These agreements show that Table 5 holds model predictions, not measurements.
+
+File: metrics_summary.png
+What it shows. Headline evaluation metrics of the final model on the held-out test set. Values come from the re-analysis of the 15-run Box-Behnken table; no confirmation run was supplied.
+
+How to read it. Each row is one metric; values are copied from results/metrics.json.
+
+Key takeaway. Runs (3 centre replicates) = 15; R2 reported (tenacity, draft) = 0.980; R2 printed eq. on data (tenacity) = 0.450; R2 lin+2FI refit (tenacity) = 0.857; R2 quadratic (tenacity) = 0.975; R2 predicted, quadratic (tenacity) = 0.597; Blend share at optimum (%) = 70.000; Opening roller at optimum (rpm) = 4200.000; Rotor speed at optimum (rpm) = 45000.000; Composite desirability = 0.957; Predicted tenacity at optimum (cN/tex) = 9.500.

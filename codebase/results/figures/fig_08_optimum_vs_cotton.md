@@ -1,0 +1,5 @@
+**What it shows.** Predicted properties at the recomputed optimum with 95% prediction intervals, the values printed in draft Table 5 for the blend yarn, and the draft's 100% cotton benchmark. No confirmation run was supplied, so every blue and orange point is a model prediction.
+
+**How to read it.** Blue dot and bar: refit prediction and where a single new yarn would fall 95% of the time. Orange square: value printed in the draft. Red diamond: benchmark. Overlap of the red diamond with the bar means no model-based evidence of a difference.
+
+**Key takeaway.** The 95% prediction interval for tenacity (8.8 to 10.2 cN/tex) lies below the cotton benchmark of 12.0; the benchmark falls inside the interval only for Elongation, Hairiness. The model therefore supports a strength deficit relative to cotton; the benchmark values for U% and imperfections are above the upper end of the intervals, which is consistent with a cleaner blend yarn, but without the benchmark's replicate data this is not a significance test.
